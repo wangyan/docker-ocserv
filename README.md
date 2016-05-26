@@ -29,7 +29,7 @@ docker logs ocserv
 进入容器：
 
 ``` 
-docker exec -it shadowsocks bash
+docker exec -it ocserv bash
 ```
 
 创建用户
@@ -51,6 +51,7 @@ docker exec -it ocserv ocpasswd -c /etc/ocserv/ocpasswd -d <your_username>
 ``` 
 /cert.sh <your_username>
 ```
+用户p12证书创建好后，在docker的/etc/ocserv/certs/文件夹下，然后可以用docker cp或者scp把p12证书文件拷贝出来
 
 重启服务
 
